@@ -1,13 +1,13 @@
-const reverseArrayInPlace = arr => {
-  for (let i = 0; i < arr.length / 2; i++) {
-    let tempVar = arr[i];
-    arr[i] = arr[arr.length - 1 - i];
-    arr[arr.length - 1 - i] = tempVar;
+const reverseArrayInPlace = array => {
+  for (let i = 0; i < array.length / 2; i++) {
+    let tempVar = array[i];
+    array[i] = array[array.length - 1 - i];
+    array[array.length - 1 - i] = tempVar;
   }
 
-  return arr;
+  return array;
 };
 
-const arrayTest = [1, 2, 3, 4, 5, 6];
+const arrayTest = [1, 2, 3, 4, 5, 6, 8, 9, 10];
 
 console.log(reverseArrayInPlace(arrayTest));
