@@ -1,18 +1,18 @@
-function caesarCipher(str, num) {
+const caesarCipher = (str, num) => {
   num = num % 26;
-  var lowerCaseString = str.toLowerCase();
-  var alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
-  var newString = "";
+  const lowerCaseString = str.toLowerCase();
+  const alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
+  let newString = "";
 
-  for (var i = 0; i < lowerCaseString.length; i++) {
-    var currentLetter = lowerCaseString[i];
+  for (let i = 0; i < lowerCaseString.length; i++) {
+    let currentLetter = lowerCaseString[i];
     if (currentLetter === " ") {
       newString += currentLetter;
       continue;
     }
 
-    var currentIndex = alphabet.indexOf(currentLetter);
-    var newIndex = currentIndex + num;
+    let currentIndex = alphabet.indexOf(currentLetter);
+    let newIndex = currentIndex + num;
     if (newIndex > 25) newIndex = newIndex - 26;
     if (newIndex < 0) newIndex = 26 + newIndex;
     if (str[i] === str[i].toUpperCase()) {
@@ -23,4 +23,6 @@ function caesarCipher(str, num) {
   }
 
   return newString;
-}
+};
+
+console.log(caesarCipher("hola mundo", 2));

@@ -1,23 +1,23 @@
 // My first try solution using reverse() method
-function reverseWords(string) {
-  var wordsArr = string.split(" ");
-  var newArr = [];
+const reverseWords = string => {
+  const wordsArr = string.split(" ");
+  const newArr = [];
 
   wordsArr.forEach(word => {
-    var individualWordArray = word.split("");
+    const individualWordArray = word.split("");
     newArr.push(individualWordArray);
   });
 
   newArr.forEach(word => word.reverse());
 
-  var reversedWords = [];
+  const reversedWords = [];
 
   newArr.forEach(arr => reversedWords.push(arr.join("")));
 
   return reversedWords.join(" ");
-}
+};
 
-reverseWords("Resolving Problems with javascript");
+console.log(reverseWords("Resolving Problems with javascript"));
 
 // Instructor solution
 

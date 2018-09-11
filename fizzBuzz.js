@@ -10,7 +10,6 @@ const fizzBuzz = num => {
       console.log(i);
     }
   }
-  return true;
 };
 
-fizzBuzz(30);
+console.log(fizzBuzz(30));

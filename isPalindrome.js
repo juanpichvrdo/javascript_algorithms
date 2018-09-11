@@ -1,9 +1,9 @@
-function isPalindrome(string) {
+const isPalindrome = string => {
   string = string.toLowerCase();
-  var chararctersArr = string.split("");
-  var validCharacters = "abcdefghijklmnopqrstuvwxyz".split("");
+  const chararctersArr = string.split("");
+  const validCharacters = "abcdefghijklmnopqrstuvwxyz".split("");
 
-  var lettersArr = [];
+  const lettersArr = [];
   chararctersArr.forEach(char => {
     if (validCharacters.indexOf(char) > -1) {
       lettersArr.push(char);
@@ -15,6 +15,6 @@ function isPalindrome(string) {
   } else {
     return false;
   }
-}
+};
 
 console.log(isPalindrome("Zorra Arroz"));

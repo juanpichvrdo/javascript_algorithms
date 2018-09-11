@@ -1,7 +1,7 @@
-function harmlessRansomNote(noteText, magazineText) {
-  var noteArr = noteText.split(" ");
-  var magazineArr = magazineText.split(" ");
-  var magazineObj = {};
+const harmlessRansomNote = (noteText, magazineText) => {
+  const noteArr = noteText.split(" ");
+  const magazineArr = magazineText.split(" ");
+  const magazineObj = {};
 
   magazineArr.forEach(word => {
     if (!magazineObj[word]) {
@@ -10,7 +10,7 @@ function harmlessRansomNote(noteText, magazineText) {
     magazineObj[word]++;
   });
 
-  var noteIsPosible = true;
+  let noteIsPosible = true;
   noteArr.forEach(word => {
     if (magazineObj[word]) {
       magazineObj[word]--;
@@ -23,6 +23,6 @@ function harmlessRansomNote(noteText, magazineText) {
   });
 
   return noteIsPosible;
-}
+};
 
-console.log(harmlessRansomNote("hola perros", "hola hijos de perros"));
+console.log(harmlessRansomNote("hola amigos", "hola hijos de amigos"));
